@@ -38,10 +38,12 @@
             border-radius: 0.75rem; /* rounded-xl */
             box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
             padding: 2rem;
-            transition: transform 0.3s ease;
+            border: 2px solid transparent; /* Add a transparent border for smooth transition */
+            transition: transform 0.3s ease, border-color 0.3s ease; /* Add border-color to transition */
         }
         .card:hover {
             transform: translateY(-5px);
+            border-color: var(--color-primary-red); /* Red border on hover */
         }
         .feature-icon {
             color: var(--color-primary-red);
