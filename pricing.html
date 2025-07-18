@@ -11,6 +11,10 @@
     <!-- Google Fonts - Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --color-primary-red: #FF0000; /* Pure Red - commonly used for vibrant logos */
+            --color-dark-red: #CC0000; /* A slightly darker shade of pure red */
+        }
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f8fafc; /* Light Slate 50 */
@@ -18,7 +22,7 @@
         }
         /* Custom styles for better aesthetics */
         .btn-primary {
-            background-color: #dc2626; /* Red 700 */
+            background-color: var(--color-primary-red);
             color: white;
             padding: 0.75rem 1.5rem;
             border-radius: 0.5rem; /* rounded-lg */
@@ -27,7 +31,7 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .btn-primary:hover {
-            background-color: #b91c1c; /* Red 800 */
+            background-color: var(--color-dark-red);
         }
         .card {
             background-color: white;
@@ -40,10 +44,10 @@
             transform: translateY(-5px);
         }
         .feature-icon {
-            color: #dc2626; /* Red 700 */
+            color: var(--color-primary-red);
         }
         .ohdibs-logo {
-            height: 40px; /* Adjust height as needed */
+            height: 134px; /* Adjusted from 67px to 134px (2x larger) */
             width: auto;
         }
     </style>
@@ -51,20 +55,20 @@
 <body class="antialiased">
 
     <!-- Header Section -->
-    <header class="bg-white shadow-sm py-4">
+    <header class="bg-[#FF0000] shadow-sm py-4">
         <nav class="container mx-auto px-4 flex justify-between items-center">
             <div class="p-2">
-                <img src="http://googleusercontent.com/file_content/2" alt="OH Dibs Logo" class="ohdibs-logo">
+                <img src="https://storage.googleapis.com/idx-acnt-gs.ihouseprd.com/AR1059431/file_manager/Untitled%20design%20%282%29.png" alt="OH Dibs Logo" class="ohdibs-logo">
             </div>
             <ul class="hidden md:flex space-x-6">
-                <li><a href="index.html" class="text-gray-700 hover:text-red-700 font-medium transition duration-200">Home</a></li>
-                <li><a href="features.html" class="text-gray-700 hover:text-red-700 font-medium transition duration-200">Features</a></li>
-                <li><a href="pricing.html" class="text-red-700 font-medium transition duration-200">Pricing</a></li>
-                <li><a href="faq.html" class="text-gray-700 hover:text-red-700 font-medium transition duration-200">FAQ</a></li>
-                <li><a href="contact-page.html" class="text-gray-700 hover:text-red-700 font-medium transition duration-200">Contact</a></li>
+                <li><a href="index.html" class="text-white hover:text-gray-200 font-medium transition duration-200">Home</a></li>
+                <li><a href="features.html" class="text-white hover:text-gray-200 font-medium transition duration-200">Features</a></li>
+                <li><a href="pricing.html" class="text-white font-medium transition duration-200">Pricing</a></li>
+                <li><a href="faq.html" class="text-white hover:text-gray-200 font-medium transition duration-200">FAQ</a></li>
+                <li><a href="contact-page.html" class="text-white hover:text-gray-200 font-medium transition duration-200">Contact</a></li>
             </ul>
             <!-- Mobile Menu Button (Hamburger) -->
-            <button class="md:hidden text-gray-700 focus:outline-none">
+            <button class="md:hidden text-white focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </button>
         </nav>
@@ -80,10 +84,10 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
                 <!-- Pricing Card 1: Basic -->
                 <div class="card border-2 border-gray-200 text-center">
-                    <h3 class="text-2xl font-bold mb-4 text-red-700">Basic Plan</h3>
+                    <h3 class="text-2xl font-bold mb-4 text-[var(--color-primary-red)]">Basic Plan</h3>
                     <p class="text-gray-500 mb-6">For brokerages with <span class="font-semibold">0-25 agents</span>.</p>
                     <div class="mb-2">
-                        <p class="text-lg font-semibold text-red-600">Early Adopter Price:</p>
+                        <p class="text-lg font-semibold text-[var(--color-primary-red)]">Early Adopter Price:</p>
                         <div class="text-4xl font-extrabold text-gray-900">
                             $199<span class="text-xl font-medium text-gray-500">/month</span>
                         </div>
@@ -108,12 +112,12 @@
                 </div>
 
                 <!-- Pricing Card 2: Standard -->
-                <div class="card border-2 border-red-700 text-center relative">
-                    <div class="absolute top-0 right-0 bg-red-700 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">Popular</div>
-                    <h3 class="text-2xl font-bold mb-4 text-red-700">Standard Plan</h3>
+                <div class="card border-2 border-[var(--color-primary-red)] text-center relative">
+                    <div class="absolute top-0 right-0 bg-[var(--color-primary-red)] text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">Popular</div>
+                    <h3 class="text-2xl font-bold mb-4 text-[var(--color-primary-red)]">Standard Plan</h3>
                     <p class="text-gray-500 mb-6">For brokerages with <span class="font-semibold">26-100 agents</span>.</p>
                     <div class="mb-2">
-                        <p class="text-lg font-semibold text-red-600">Early Adopter Price:</p>
+                        <p class="text-lg font-semibold text-[var(--color-primary-red)]">Early Adopter Price:</p>
                         <div class="text-4xl font-extrabold text-gray-900">
                             $299<span class="text-xl font-medium text-gray-500">/month</span>
                         </div>
@@ -139,10 +143,10 @@
 
                 <!-- Pricing Card 3: Pro -->
                 <div class="card border-2 border-gray-200 text-center">
-                    <h3 class="text-2xl font-bold mb-4 text-red-700">Pro Plan</h3>
+                    <h3 class="text-2xl font-bold mb-4 text-[var(--color-primary-red)]">Pro Plan</h3>
                     <p class="text-gray-500 mb-6">For brokerages with <span class="font-semibold">101-300 agents</span>.</p>
                     <div class="mb-2">
-                        <p class="text-lg font-semibold text-red-600">Early Adopter Price:</p>
+                        <p class="text-lg font-semibold text-[var(--color-primary-red)]">Early Adopter Price:</p>
                         <div class="text-4xl font-extrabold text-gray-900">
                             $399<span class="text-xl font-medium text-gray-500">/month</span>
                         </div>
@@ -169,10 +173,10 @@
 
                 <!-- Pricing Card 4: Enterprise -->
                 <div class="card border-2 border-gray-200 text-center">
-                    <h3 class="text-2xl font-bold mb-4 text-red-700">Enterprise Plan</h3>
+                    <h3 class="text-2xl font-bold mb-4 text-[var(--color-primary-red)]">Enterprise Plan</h3>
                     <p class="text-gray-500 mb-6">Custom solutions for brokerages with <span class="font-semibold">301+ agents</span>.</p>
                     <div class="mb-2">
-                        <p class="text-lg font-semibold text-red-600">Early Adopter Price:</p>
+                        <p class="text-lg font-semibold text-[var(--color-primary-red)]">Early Adopter Price:</p>
                         <div class="text-4xl font-extrabold text-gray-900">
                             Call for Pricing
                         </div>
@@ -183,7 +187,7 @@
                             Call for Pricing
                         </div>
                     </div>
-                    <p class="text-gray-600 mb-6 text-lg font-semibold">$500+ <span class="text-base font-normal">custom setup</span></p>
+                    <p class="text-gray-600 mb-6 text-lg font-semibold">$500+ <span class="text-base font-normal">one-time setup</span></p>
                     <ul class="text-left text-gray-700 space-y-3 mb-8">
                         <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Unlimited Open Houses</li>
                         <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Effortless Scheduling</li>
@@ -200,13 +204,13 @@
     </section>
 
     <!-- Call to Action / Contact Section (replicated for standalone page) -->
-    <section class="bg-red-800 text-white py-16 md:py-24 text-center rounded-t-3xl shadow-xl">
+    <section class="bg-[var(--color-dark-red)] text-white py-16 md:py-24 text-center rounded-t-3xl shadow-xl">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Open Houses?</h2>
             <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-90">
                 Join forward-thinking brokerages transforming their open house management.
             </p>
-            <a href="contact-page.html" class="btn-primary bg-white text-red-800 hover:bg-gray-100 inline-block">
+            <a href="contact-page.html" class="btn-primary bg-white text-[var(--color-dark-red)] hover:bg-gray-100 inline-block">
                 Contact Us Today
             </a>
         </div>
