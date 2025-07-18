@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OH Dibs - Real Estate Brokerage Software Pricing</title>
-    <meta name="description" content="Discover transparent pricing plans for OH Dibs real estate brokerage software. Choose the best plan for your team, with options for various brokerage sizes and early adopter discounts.">
-    <meta name="keywords" content="real estate brokerage software pricing, open house software cost, agent management platform price, real estate tech plans, brokerage subscription">
+    <title>OH Dibs - Key Features</title>
+    <meta name="description" content="Explore the powerful features of OH Dibs real estate brokerage software, designed to streamline open house management, enhance agent collaboration, and provide valuable market insights.">
+    <meta name="keywords" content="OH Dibs features, real estate software features, open house management, agent collaboration, brokerage tools, automated scheduling">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts - Inter -->
@@ -19,8 +19,10 @@
             font-family: 'Inter', sans-serif;
             background-color: #f8fafc; /* Light Slate 50 */
             color: #1e293b; /* Slate 900 */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure body takes full viewport height */
         }
-        /* Custom styles for better aesthetics */
         .btn-primary {
             background-color: var(--color-primary-red);
             color: white;
@@ -45,179 +47,177 @@
         }
         .feature-icon {
             color: var(--color-primary-red);
+            font-size: 3rem; /* Larger icons */
+            margin-bottom: 1rem;
         }
         .ohdibs-logo {
-            height: 134px; /* Adjusted from 67px to 134px (2x larger) */
+            height: 134px; /* Consistent logo size */
             width: auto;
+        }
+        /* Mobile navigation specific styles */
+        .mobile-menu {
+            display: none; /* Hidden by default */
+            flex-direction: column;
+            width: 100%;
+            background-color: var(--color-dark-red);
+            position: absolute;
+            top: 100%; /* Position below the header */
+            left: 0;
+            z-index: 10;
+            padding: 1rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .mobile-menu.active {
+            display: flex;
+        }
+        .mobile-menu li {
+            text-align: center;
+            padding: 0.75rem 0;
+        }
+        .mobile-menu a {
+            color: white;
+            font-weight: 500;
+            display: block;
+            padding: 0.5rem 1rem;
+        }
+        .mobile-menu a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        .underline-on-hover:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- Header Section -->
-    <header class="bg-[#FF0000] shadow-sm py-4">
+    <!-- Header Section (Consistent with other pages) -->
+    <header class="bg-[#FF0000] shadow-sm py-4 relative">
         <nav class="container mx-auto px-4 flex justify-between items-center">
             <div class="p-2">
-                <img src="https://storage.googleapis.com/idx-acnt-gs.ihouseprd.com/AR1059431/file_manager/OHDibsLogo.png" alt="OH Dibs Logo" class="ohdibs-logo">
+                <a href="index.html"> <!-- Link to home page for logo -->
+                    <img src="https://storage.googleapis.com/idx-acnt-gs.ihouseprd.com/AR1059431/file_manager/OHDibsLogo.png" alt="OH Dibs Logo" class="ohdibs-logo">
+                </a>
             </div>
-            <ul class="hidden md:flex space-x-6">
+            <ul id="desktop-nav" class="hidden md:flex space-x-6">
                 <li><a href="index.html" class="text-white hover:text-gray-200 font-medium transition duration-200">Home</a></li>
-                <li><a href="features.html" class="text-white hover:text-gray-200 font-medium transition duration-200">Features</a></li>
-                <li><a href="pricing.html" class="text-white font-medium transition duration-200">Pricing</a></li>
+                <li><a href="features.html" class="text-white font-medium transition duration-200">Features</a></li>
+                <li><a href="pricing.html" class="text-white hover:text-gray-200 font-medium transition duration-200">Pricing</a></li>
                 <li><a href="faq.html" class="text-white hover:text-gray-200 font-medium transition duration-200">FAQ</a></li>
                 <li><a href="contact-page.html" class="text-white hover:text-gray-200 font-medium transition duration-200">Contact</a></li>
             </ul>
             <!-- Mobile Menu Button (Hamburger) -->
-            <button class="md:hidden text-white focus:outline-none">
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </button>
         </nav>
+        <!-- Mobile Menu (Hidden by default) -->
+        <ul id="mobile-menu" class="mobile-menu md:hidden">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact-page.html">Contact</a></li>
+        </ul>
     </header>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-16 md:py-24 bg-white">
+    <!-- Grey line between header and main content -->
+    <div class="w-full h-px bg-gray-300"></div>
+
+    <!-- Features Hero Section -->
+    <section class="bg-white text-gray-800 py-20 md:py-32 text-center rounded-b-3xl shadow-xl">
         <div class="container mx-auto px-4">
-            <h1 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Simple & Transparent Pricing</h1>
-            <p class="text-center text-gray-600 mb-10 max-w-3xl mx-auto">
-                Our pricing is designed to scale with your brokerage. Lock in early adopter rates for the first 30 offices!
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-down">
+                Unleash the Full Potential of Your Brokerage
+            </h1>
+            <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-90 animate-fade-in-up">
+                OH Dibs is packed with powerful features designed to simplify your workflow, empower your agents, and grow your business.
             </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-                <!-- Pricing Card 1: Basic -->
-                <div class="card border-2 border-gray-200 text-center">
-                    <h3 class="text-2xl font-bold mb-4 text-[var(--color-primary-red)]">Basic Plan</h3>
-                    <p class="text-gray-500 mb-6">For brokerages with <span class="font-semibold">0-25 agents</span>.</p>
-                    <div class="mb-2">
-                        <p class="text-lg font-semibold text-[var(--color-primary-red)]">Early Adopter Price:</p>
-                        <div class="text-4xl font-extrabold text-gray-900">
-                            $199<span class="text-xl font-medium text-gray-500">/month</span>
-                        </div>
-                    </div>
-                    <div class="mb-6">
-                        <p class="text-lg font-semibold text-gray-700">Standard Price:</p>
-                        <div class="text-3xl font-extrabold text-gray-500">
-                            $249<span class="text-lg font-medium text-gray-400">/month</span>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mb-6 text-lg font-semibold">$500 <span class="text-base font-normal">one-time setup</span></p>
-                    <ul class="text-left text-gray-700 space-y-3 mb-8">
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Unlimited Open Houses</li>
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Effortless Scheduling</li>
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Automated Notifications</li>
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Mobile-Friendly Interface</li>
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Priority Support</li>
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Leverage for Top Agents</li>
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Market Activity Insights</li>
-                    </ul>
-                    <button class="btn-primary w-full">Choose Basic</button>
-                </div>
+            <a href="contact-page.html" class="btn-primary inline-block bg-[var(--color-primary-red)] text-white hover:bg-[var(--color-dark-red)]" style="border-bottom: 2px solid #a0aec0;">
+                Get a Demo
+            </a>
+        </div>
+    </section>
 
-                <!-- Pricing Card 2: Standard -->
-                <div class="card border-2 border-[var(--color-primary-red)] text-center relative">
-                    <div class="absolute top-0 right-0 bg-[var(--color-primary-red)] text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">Popular</div>
-                    <h3 class="text-2xl font-bold mb-4 text-[var(--color-primary-red)]">Standard Plan</h3>
-                    <p class="text-gray-500 mb-6">For brokerages with <span class="font-semibold">26-100 agents</span>.</p>
-                    <div class="mb-2">
-                        <p class="text-lg font-semibold text-[var(--color-primary-red)]">Early Adopter Price:</p>
-                        <div class="text-4xl font-extrabold text-gray-900">
-                            $299<span class="text-xl font-medium text-gray-500">/month</span>
-                        </div>
-                    </div>
-                    <div class="mb-6">
-                        <p class="text-lg font-semibold text-gray-700">Standard Price:</p>
-                        <div class="text-3xl font-extrabold text-gray-500">
-                            $374<span class="text-lg font-medium text-gray-400">/month</span>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mb-6 text-lg font-semibold">$500 <span class="text-base font-normal">one-time setup</span></p>
-                    <ul class="text-left text-gray-700 space-y-3 mb-8">
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Unlimited Open Houses</li>
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Effortless Scheduling</li>
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Automated Notifications</li>
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Mobile-Friendly Interface</li>
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Priority Support</li>
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Leverage for Top Agents</li>
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Market Activity Insights</li>
-                    </ul>
-                    <button class="btn-primary w-full">Choose Standard</button>
+    <!-- Core Features Section -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <!-- Line above "Our Core Features" -->
+            <div class="w-full h-px bg-gray-300 mb-12"></div>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Our Core Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1: Unlimited Open Houses -->
+                <div class="card text-center">
+                    <div class="feature-icon">🏠</div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Unlimited Open Houses</h3>
+                    <p class="text-gray-600">Host as many open houses as you need without worrying about limits. Scale your events effortlessly.</p>
                 </div>
-
-                <!-- Pricing Card 3: Pro -->
-                <div class="card border-2 border-gray-200 text-center">
-                    <h3 class="text-2xl font-bold mb-4 text-[var(--color-primary-red)]">Pro Plan</h3>
-                    <p class="text-gray-500 mb-6">For brokerages with <span class="font-semibold">101-300 agents</span>.</p>
-                    <div class="mb-2">
-                        <p class="text-lg font-semibold text-[var(--color-primary-red)]">Early Adopter Price:</p>
-                        <div class="text-4xl font-extrabold text-gray-900">
-                            $399<span class="text-xl font-medium text-gray-500">/month</span>
-                        </div>
-                    </div>
-                    <div class="mb-6">
-                        <p class="text-lg font-semibold text-gray-700">Standard Price:</p>
-                        <div class="text-3xl font-extrabold text-gray-500">
-                            $499<span class="text-lg font-medium text-gray-400">/month</span>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mb-6 text-lg font-semibold">$500 <span class="text-base font-normal">one-time setup</span></p>
-                    <ul class="text-left text-gray-700 space-y-3 mb-8">
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Unlimited Open Houses</li>
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Effortless Scheduling</li>
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Automated Notifications</li>
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Mobile-Friendly Interface</li>
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Priority Support</li>
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Leverage for Top Agents</li>
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Market Activity Insights</li>
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Dedicated Onboarding</li>
-                    </ul>
-                    <button class="btn-primary w-full">Choose Pro</button>
+                <!-- Feature 2: Effortless Scheduling -->
+                <div class="card text-center">
+                    <div class="feature-icon">🗓️</div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Effortless Scheduling</h3>
+                    <p class="text-gray-600">Intuitive tools for listing agents to post open house opportunities and for other agents to claim them with ease.</p>
                 </div>
-
-                <!-- Pricing Card 4: Enterprise -->
-                <div class="card border-2 border-gray-200 text-center">
-                    <h3 class="text-2xl font-bold mb-4 text-[var(--color-primary-red)]">Enterprise Plan</h3>
-                    <p class="text-gray-500 mb-6">Custom solutions for brokerages with <span class="font-semibold">301+ agents</span>.</p>
-                    <div class="mb-2">
-                        <p class="text-lg font-semibold text-[var(--color-primary-red)]">Early Adopter Price:</p>
-                        <div class="text-4xl font-extrabold text-gray-900">
-                            Call for Pricing
-                        </div>
-                    </div>
-                    <div class="mb-6">
-                        <p class="text-lg font-semibold text-gray-700">Standard Price:</p>
-                        <div class="text-3xl font-extrabold text-gray-500">
-                            Call for Pricing
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mb-6 text-lg font-semibold">$500+ <span class="text-base font-normal">one-time setup</span></p>
-                    <ul class="text-left text-gray-700 space-y-3 mb-8">
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Unlimited Open Houses</li>
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Effortless Scheduling</li>
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Automated Notifications</li>
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Mobile-Friendly Interface</li>
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Priority Support</li>
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Leverage for Top Agents</li>
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Market Activity Insights</li>
-                    </ul>
-                    <button class="btn-primary w-full">Contact Sales</button>
+                <!-- Feature 3: Automated Notifications -->
+                <div class="card text-center">
+                    <div class="feature-icon">🔔</div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Automated Notifications</h3>
+                    <p class="text-gray-600">Keep everyone in the loop with automated alerts for new opportunities, claims, and important updates.</p>
+                </div>
+                <!-- Feature 4: Mobile-Friendly Interface -->
+                <div class="card text-center">
+                    <div class="feature-icon">📱</div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Mobile-Friendly Interface</h3>
+                    <p class="text-gray-600">Manage open houses on the go with a responsive design that works seamlessly on any device.</p>
+                </div>
+                <!-- Feature 5: Priority Support -->
+                <div class="card text-center">
+                    <div class="feature-icon">🤝</div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Priority Support</h3>
+                    <p class="text-gray-600">Get dedicated assistance from our expert team whenever you need it, ensuring smooth operations.</p>
+                </div>
+                <!-- Feature 6: Agent Profiles & Matching -->
+                <div class="card text-center">
+                    <div class="feature-icon">🔗</div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Agent Profiles & Matching</h3>
+                    <p class="text-gray-600">Create detailed agent profiles and utilize smart matching algorithms to connect listing agents with the best-suited hosts.</p>
+                </div>
+                <!-- Feature 7: Feedback & Reporting -->
+                <div class="card text-center">
+                    <div class="feature-icon">💬</div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Automated Feedback & Reporting</h3>
+                    <p class="text-gray-600">Collect visitor feedback effortlessly and generate comprehensive reports for sellers and brokerage analysis.</p>
+                </div>
+                <!-- Feature 8: Secure Data Management -->
+                <div class="card text-center">
+                    <div class="feature-icon">🔒</div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Secure Data Management</h3>
+                    <p class="text-gray-600">Ensure all your brokerage and client data is protected with robust security protocols and compliance features.</p>
+                </div>
+                <!-- New Feature: Brokerage Roster -->
+                <div class="card text-center">
+                    <div class="feature-icon">👥</div> <!-- Cute icon for community/roster -->
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Brokerage Roster</h3>
+                    <p class="text-gray-600">Facilitate and encourage communication and community within your brokerage with an easily accessible agent roster.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action / Contact Section (replicated for standalone page) -->
+    <!-- Call to Action / Pricing Section -->
     <section class="bg-[var(--color-dark-red)] text-white py-16 md:py-24 text-center rounded-t-3xl shadow-xl">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Open Houses?</h2>
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Streamline Your Brokerage?</h2>
             <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-90">
-                Join forward-thinking brokerages transforming their open house management.
+                Explore our flexible pricing plans and find the perfect solution for your team.
             </p>
-            <a href="contact-page.html" class="btn-primary bg-white text-[var(--color-dark-red)] hover:bg-gray-100 inline-block">
-                Contact Us Today
+            <a href="pricing.html" class="btn-primary bg-white text-[var(--color-dark-red)] hover:bg-gray-100 inline-block">
+                View Pricing Plans
             </a>
         </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer class="bg-gray-800 text-gray-300 py-8">
+    <!-- Footer Section (Consistent with other pages) -->
+    <footer class="bg-gray-800 text-gray-300 py-8 mt-auto">
         <div class="container mx-auto px-4 text-center md:flex md:justify-between md:items-center">
             <div class="mb-4 md:mb-0">
                 &copy; 2025 OH Dibs. All rights reserved.
@@ -231,5 +231,12 @@
         </div>
     </footer>
 
+    <script>
+        // JavaScript for mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
