@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OH Dibs - Order Your Plan</title>
+    <meta name="description" content="Select your OH Dibs plan and provide your details to get started with our real estate brokerage software.">
+    <meta name="keywords" content="OH Dibs order form, real estate software purchase, brokerage software signup, open house software buy, subscribe to OH Dibs">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary-red: #FF0000; /* Pure Red - commonly used for vibrant logos */
+            --color-dark-red: #CC0000; /* A slightly darker shade of pure red */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light Slate 50 */
+            color: #1e293b; /* Slate 900 */
+        }
+        .btn-primary {
+            background-color: var(--color-primary-red);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem; /* rounded-lg */
+            font-weight: 600; /* font-semibold */
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .btn-primary:hover {
+            background-color: var(--color-dark-red);
+        }
+        .form-input, .form-select {
+            border-radius: 0.5rem; /* rounded-lg */
+            border: 1px solid #cbd5e1; /* Slate 300 */
+            padding: 0.75rem 1rem;
+            width: 100%;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .form-input:focus, .form-select:focus {
+            outline: none;
+            border-color: var(--color-primary-red);
+            box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.2); /* Red 700 with opacity */
+        }
+        .ohdibs-logo {
+            height: 120px; /* Adjusted from 40px to 120px (tripled) */
+            width: auto;
+        }
+        /* Mobile navigation specific styles */
+        .mobile-menu {
+            display: none; /* Hidden by default */
+            flex-direction: column;
+            width: 100%;
+            background-color: var(--color-dark-red);
+            position: absolute;
+            top: 100%; /* Position below the header */
+            left: 0;
+            z-index: 10;
+            padding: 1rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .mobile-menu.active {
+            display: flex;
+        }
+        .mobile-menu li {
+            text-align: center;
+            padding: 0.75rem 0;
+        }
+        .mobile-menu a {
+            color: white;
+            font-weight: 500;
+            display: block;
+            padding: 0.5rem 1rem;
+        }
+        .mobile-menu a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header Section -->
+    <header class="bg-[#FF0000] shadow-sm py-4 relative">
+        <nav class="container mx-auto px-4 flex justify-between items-center">
+            <div class="p-2">
+                <a href="index.html"> <!-- Link to home page for logo -->
+                    <img src="https://storage.googleapis.com/idx-acnt-gs.ihouseprd.com/AR1059431/file_manager/OHDibsLogo.png" alt="OH Dibs Logo" class="ohdibs-logo">
+                </a>
+            </div>
+            <ul id="desktop-nav" class="hidden md:flex space-x-6">
+                <li><a href="index.html" class="text-white hover:text-gray-200 font-medium transition duration-200">Home</a></li>
+                <li><a href="features.html" class="text-white hover:text-gray-200 font-medium transition duration-200">Features</a></li>
+                <li><a href="pricing.html" class="text-white hover:text-gray-200 font-medium transition duration-200">Pricing</a></li>
+                <li><a href="faq.html" class="text-white hover:text-gray-200 font-medium transition duration-200">FAQ</a></li>
+                <li><a href="contact-page.html" class="text-white hover:text-gray-200 font-medium transition duration-200">Contact</a></li>
+            </ul>
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu (Hidden by default) -->
+        <ul id="mobile-menu" class="mobile-menu md:hidden">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact-page.html">Contact</a></li>
+        </ul>
+    </header>
+
+    <!-- Order Form Section -->
+    <section id="order-form" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-2xl">
+            <h1 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Order Your OH Dibs Plan</h1>
+            <p class="text-center text-gray-600 mb-8">
+                Fill out the form below to subscribe to your chosen OH Dibs plan. A one-time setup fee of <span class="font-bold text-gray-800">$500</span> will be applied, followed by your selected monthly subscription fee. Our team will contact you shortly to finalize the setup and payment details.
+            </p>
+
+            <div class="bg-white p-8 rounded-xl shadow-lg">
+                <form action="#" method="POST" class="space-y-6">
+                    <!-- Brokerage Information -->
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Brokerage Information</h2>
+                    <div>
+                        <label for="brokerage_name" class="block text-gray-700 text-sm font-semibold mb-2">Brokerage Name</label>
+                        <input type="text" id="brokerage_name" name="brokerage_name" class="form-input" placeholder="Your Brokerage Name" required>
+                    </div>
+                    <div>
+                        <label for="subdomain" class="block text-gray-700 text-sm font-semibold mb-2">Choose Your Subdomain</label>
+                        <div class="flex items-center">
+                            <input type="text" id="subdomain" name="subdomain" class="form-input rounded-r-none" placeholder="yourbrokerage" required pattern="[a-z0-9-]+" title="Only lowercase letters, numbers, and hyphens are allowed.">
+                            <span class="inline-flex items-center px-3 rounded-r-md border border-l-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
+                                .ohdibs.com
+                            </span>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-1">Your OH Dibs platform will be accessible at: yourbrokerage.ohdibs.com</p>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <h2 class="text-2xl font-bold text-gray-800 pt-6 mb-4">Contact Information</h2>
+                    <div>
+                        <label for="contact_name" class="block text-gray-700 text-sm font-semibold mb-2">Your Full Name</label>
+                        <input type="text" id="contact_name" name="contact_name" class="form-input" placeholder="John Doe" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-700 text-sm font-semibold mb-2">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com" required>
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-gray-700 text-sm font-semibold mb-2">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="form-input" placeholder="e.g., (123) 456-7890" required>
+                    </div>
+
+                    <!-- Billing Information -->
+                    <h2 class="text-2xl font-bold text-gray-800 pt-6 mb-4">Billing Information</h2>
+                    <div>
+                        <label for="billing_contact_name" class="block text-gray-700 text-sm font-semibold mb-2">Billing Contact Name</label>
+                        <input type="text" id="billing_contact_name" name="billing_contact_name" class="form-input" placeholder="Billing Contact Full Name" required>
+                    </div>
+                    <div>
+                        <label for="billing_email" class="block text-gray-700 text-sm font-semibold mb-2">Billing Email Address</label>
+                        <input type="email" id="billing_email" name="billing_email" class="form-input" placeholder="billing@example.com" required>
+                    </div>
+                    <div>
+                        <label for="billing_address" class="block text-gray-700 text-sm font-semibold mb-2">Billing Address</label>
+                        <input type="text" id="billing_address" name="billing_address" class="form-input" placeholder="Street Address" required>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div>
+                            <label for="billing_city" class="block text-gray-700 text-sm font-semibold mb-2">City</label>
+                            <input type="text" id="billing_city" name="billing_city" class="form-input" placeholder="City" required>
+                        </div>
+                        <div>
+                            <label for="billing_state" class="block text-gray-700 text-sm font-semibold mb-2">State / Province</label>
+                            <input type="text" id="billing_state" name="billing_state" class="form-input" placeholder="State" required>
+                        </div>
+                        <div>
+                            <label for="billing_zip" class="block text-gray-700 text-sm font-semibold mb-2">Zip / Postal Code</label>
+                            <input type="text" id="billing_zip" name="billing_zip" class="form-input" placeholder="Zip Code" required>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="billing_country" class="block text-gray-700 text-sm font-semibold mb-2">Country</label>
+                        <input type="text" id="billing_country" name="billing_country" class="form-input" placeholder="Country" required>
+                    </div>
+
+                    <!-- Plan Selection (from previous version, simplified) -->
+                    <div>
+                        <label for="plan" class="block text-gray-700 text-sm font-semibold mb-2">Select Your Plan</label>
+                        <select id="plan" name="plan" class="form-select" required>
+                            <option value="">-- Please choose a plan --</option>
+                            <option value="basic">Basic Plan (0-25 agents)</option>
+                            <option value="standard">Standard Plan (26-100 agents)</option>
+                            <option value="pro">Pro Plan (101-300 agents)</option>
+                            <option value="enterprise">Enterprise Plan (301+ agents) - Contact Sales</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="comments" class="block text-gray-700 text-sm font-semibold mb-2">Additional Comments (Optional)</label>
+                        <textarea id="comments" name="comments" rows="4" class="form-input resize-none" placeholder="Any specific requirements or questions?"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn-primary">Submit Order</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-gray-300 py-8 mt-auto">
+        <div class="container mx-auto px-4 text-center md:flex md:justify-between md:items-center">
+            <div class="mb-4 md:mb-0">
+                &copy; 2025 OH Dibs. All rights reserved.
+            </div>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="hover:text-white transition duration-200">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition duration-200">Terms of Service</a>
+                <a href="tel:8507643427" class="hover:text-white transition duration-200">(850) 764-3427</a>
+                <a href="mailto:info@OHDibs.com" class="hover:text-white transition duration-200">info@OHDibs.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
