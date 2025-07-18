@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OH Dibs - Real Estate Brokerage Software FAQ</title>
+    <meta name="description" content="Find answers to frequently asked questions about OH Dibs, your real estate brokerage software for open house and showing management. Learn about features, pricing, and more.">
+    <meta name="keywords" content="real estate software FAQ, open house management questions, brokerage platform support, OH Dibs help, real estate tech answers">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light Slate 50 */
+            color: #1e293b; /* Slate 900 */
+        }
+        /* Custom styles for better aesthetics */
+        .btn-primary {
+            background-color: #dc2626; /* Red 700 */
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem; /* rounded-lg */
+            font-weight: 600; /* font-semibold */
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .btn-primary:hover {
+            background-color: #b91c1c; /* Red 800 */
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .feature-icon {
+            color: #dc2626; /* Red 700 */
+        }
+        /* FAQ Accordion styles (limited JS implementation) */
+        .faq-item {
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            color: #1e293b;
+            transition: background-color 0.3s ease;
+        }
+        .faq-question:hover {
+            background-color: #f1f5f9; /* Slate 100 */
+        }
+        .faq-answer {
+            padding: 0 1.5rem 1.25rem 1.5rem;
+            color: #475569; /* Slate 600 */
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+        }
+        .faq-answer.open {
+            max-height: 200px; /* Adjust as needed */
+            padding: 0.75rem 1.5rem 1.25rem 1.5rem;
+            transition: max-height 0.7s ease-in, padding 0.7s ease-in;
+        }
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+        .faq-question.active .faq-icon {
+            transform: rotate(180deg);
+        }
+        .ohdibs-logo {
+            height: 40px; /* Adjust height as needed */
+            width: auto;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm py-4">
+        <nav class="container mx-auto px-4 flex justify-between items-center">
+            <div class="p-2">
+                <img src="http://googleusercontent.com/file_content/2" alt="OH Dibs Logo" class="ohdibs-logo">
+            </div>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="index.html" class="text-gray-700 hover:text-red-700 font-medium transition duration-200">Home</a></li>
+                <li><a href="features.html" class="text-gray-700 hover:text-red-700 font-medium transition duration-200">Features</a></li>
+                <li><a href="pricing.html" class="text-gray-700 hover:text-red-700 font-medium transition duration-200">Pricing</a></li>
+                <li><a href="faq.html" class="text-red-700 font-medium transition duration-200">FAQ</a></li>
+                <li><a href="contact-page.html" class="text-gray-700 hover:text-red-700 font-medium transition duration-200">Contact</a></li>
+            </ul>
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button class="md:hidden text-gray-700 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </nav>
+    </header>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h1 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Frequently Asked Questions</h1>
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>What is OH Dibs?</span>
+                        <svg class="w-6 h-6 faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>OH Dibs is a software platform designed for real estate brokerages to streamline the management of open houses and showing requests, allow agents in your office to post and claim opportunities.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>How does the agent matching system work?</span>
+                        <svg class="w-6 h-6 faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our system allows listing agents and top agents in your office to post opportunities for hosting open houses or showing property with available and suitable open house hosts and showing agents within your brokerage, ensuring optimal coverage and efficiency for every event.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Is there a setup fee for the plans?</span>
+                        <svg class="w-6 h-6 faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, there is a one-time setup fee of $500 for the Basic, Standard, and Pro plans. For the Enterprise plan, the setup fee is custom and starts from $500+.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Do all plans include the same features?</span>
+                        <svg class="w-6 h-6 faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>All our plans include core features such as Unlimited Open Houses, Effortless Scheduling, Automated Notifications, Mobile-Friendly Interface, Priority Support, and Leverage for Top Agents. Higher-tier plans offer additional benefits like Dedicated Onboarding and Custom Integrations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action / Contact Section (replicated for standalone page) -->
+    <section class="bg-red-800 text-white py-16 md:py-24 text-center rounded-t-3xl shadow-xl">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Open Houses?</h2>
+            <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-90">
+                Join forward-thinking brokerages transforming their open house management.
+            </p>
+            <a href="contact-page.html" class="btn-primary bg-white text-red-800 hover:bg-gray-100 inline-block">
+                Contact Us Today
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-gray-300 py-8">
+        <div class="container mx-auto px-4 text-center md:flex md:justify-between md:items-center">
+            <div class="mb-4 md:mb-0">
+                &copy; 2025 OH Dibs. All rights reserved.
+            </div>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="hover:text-white transition duration-200">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition duration-200">Terms of Service</a>
+                <a href="tel:8507643427" class="hover:text-white transition duration-200">(850) 764-3427</a>
+                <a href="mailto:info@OHDibs.com" class="hover:text-white transit
