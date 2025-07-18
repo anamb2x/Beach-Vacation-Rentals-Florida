@@ -10,6 +10,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts - Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <style>
         :root {
             --color-primary-red: #FF0000; /* Pure Red - commonly used for vibrant logos */
@@ -91,17 +94,18 @@
 <body class="antialiased">
 
     <!-- Header Section (Consistent with other pages) -->
-    <header class="bg-[#FF0000] shadow-sm py-2 relative"> <!-- Reduced py-4 to py-2 -->
-        <nav class="container mx-auto px-4 flex justify-between items-center py-0"> <!-- py-0 for tighter nav -->
+    <header class="bg-[#FF0000] shadow-sm py-2 relative">
+        <nav class="container mx-auto px-4 flex justify-between items-center py-0">
             <div class="p-2">
                 <a href="index.html"> <!-- Link to home page for logo -->
-                    <img src="https://storage.googleapis.com/idx-acnt-gs.ihouseprd.com/AR1059431/file_manager/OHDibsLogo.png" alt="OH Dibs Logo" class="ohdibs-logo" style="height: 67px;"> <!-- Reduced logo height -->
+                    <img src="https://storage.googleapis.com/idx-acnt-gs.ihouseprd.com/AR1059431/file_manager/OHDibsLogo.png" alt="OH Dibs Logo" class="ohdibs-logo"> <!-- Logo height set to 134px via .ohdibs-logo class -->
                 </a>
             </div>
             <ul id="desktop-nav" class="hidden md:flex space-x-6">
                 <li><a href="index.html" class="text-white hover:text-gray-200 font-medium transition duration-200">Home</a></li>
                 <li><a href="features.html" class="text-white font-medium transition duration-200">Features</a></li>
                 <li><a href="pricing.html" class="text-white hover:text-gray-200 font-medium transition duration-200">Pricing</a></li>
+                <li><a href="order-form-page.html" class="text-white hover:text-gray-200 font-medium transition duration-200">Order</a></li> <!-- Added Order link -->
                 <li><a href="faq.html" class="text-white hover:text-gray-200 font-medium transition duration-200">FAQ</a></li>
                 <li><a href="contact-page.html" class="text-white hover:text-gray-200 font-medium transition duration-200">Contact</a></li>
             </ul>
@@ -115,6 +119,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="features.html">Features</a></li>
             <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="order-form-page.html">Order</a></li> <!-- Added Order link to mobile menu -->
             <li><a href="faq.html">FAQ</a></li>
             <li><a href="contact-page.html">Contact</a></li>
         </ul>
@@ -124,12 +129,12 @@
     <div class="w-full h-px bg-gray-300"></div>
 
     <!-- Features Hero Section -->
-    <section class="bg-white text-gray-800 py-6 md:py-8 text-center rounded-b-3xl shadow-xl"> <!-- Reduced py-8 to py-6 and md:py-12 to md:py-8 -->
+    <section class="bg-white text-gray-800 py-6 md:py-8 text-center rounded-b-3xl shadow-xl">
         <div class="container mx-auto px-4">
             <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-down">
                 Unleash the Full Potential of Your Brokerage
             </h1>
-            <p class="text-lg md:text-xl mb-3 max-w-3xl mx-auto opacity-90 animate-fade-in-up"> <!-- Reduced mb-4 to mb-3 -->
+            <p class="text-lg md:text-xl mb-3 max-w-3xl mx-auto opacity-90 animate-fade-in-up">
                 OH Dibs is packed with powerful features designed to simplify your workflow, empower your agents, and grow your business.
             </p>
             <a href="contact-page.html" class="btn-primary inline-block bg-[var(--color-primary-red)] text-white hover:bg-[var(--color-dark-red)]" style="border-bottom: 2px solid #a0aec0;">
@@ -139,10 +144,10 @@
     </section>
 
     <!-- Core Features Section -->
-    <section class="py-12 md:py-16 bg-white"> <!-- Reduced py-16 to py-12 and md:py-20 to md:py-16 -->
+    <section class="py-12 md:py-16 bg-white">
         <div class="container mx-auto px-4">
             <!-- Line above "Our Core Features" -->
-            <div class="w-full h-px bg-gray-300 mb-4"></div> <!-- Reduced mb-6 to mb-4 -->
+            <div class="w-full h-px bg-gray-300 mb-4"></div>
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Our Core Features</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Feature 1: Unlimited Open Houses -->
@@ -204,7 +209,7 @@
     </section>
 
     <!-- Call to Action / Pricing Section -->
-    <section class="bg-[var(--color-dark-red)] text-white py-12 md:py-16 text-center rounded-t-3xl shadow-xl"> <!-- Reduced py-16 to py-12 and md:py-24 to md:py-16 -->
+    <section class="bg-[var(--color-dark-red)] text-white py-12 md:py-16 text-center rounded-t-3xl shadow-xl">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Streamline Your Brokerage?</h2>
             <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-90">
@@ -217,7 +222,7 @@
     </section>
 
     <!-- Footer Section (Consistent with other pages) -->
-    <footer class="bg-gray-800 text-gray-300 py-6 mt-auto"> <!-- Reduced py-8 to py-6 -->
+    <footer class="bg-gray-800 text-gray-300 py-6 mt-auto">
         <div class="container mx-auto px-4 text-center md:flex md:justify-between md:items-center">
             <div class="mb-4 md:mb-0">
                 &copy; 2025 OH Dibs. All rights reserved.
