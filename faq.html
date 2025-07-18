@@ -11,6 +11,10 @@
     <!-- Google Fonts - Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --color-primary-red: #FF0000; /* Pure Red - commonly used for vibrant logos */
+            --color-dark-red: #CC0000; /* A slightly darker shade of pure red */
+        }
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f8fafc; /* Light Slate 50 */
@@ -18,7 +22,7 @@
         }
         /* Custom styles for better aesthetics */
         .btn-primary {
-            background-color: #dc2626; /* Red 700 */
+            background-color: var(--color-primary-red);
             color: white;
             padding: 0.75rem 1.5rem;
             border-radius: 0.5rem; /* rounded-lg */
@@ -27,7 +31,7 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .btn-primary:hover {
-            background-color: #b91c1c; /* Red 800 */
+            background-color: var(--color-dark-red);
         }
         .card {
             background-color: white;
@@ -40,7 +44,7 @@
             transform: translateY(-5px);
         }
         .feature-icon {
-            color: #dc2626; /* Red 700 */
+            color: var(--color-primary-red);
         }
         /* FAQ Accordion styles (limited JS implementation) */
         .faq-item {
@@ -71,7 +75,7 @@
             transition: max-height 0.5s ease-out, padding 0.5s ease-out;
         }
         .faq-answer.open {
-            max-height: 200px; /* Adjust as needed */
+            max-height: 1000px; /* Adjusted to a larger value for better content display */
             padding: 0.75rem 1.5rem 1.25rem 1.5rem;
             transition: max-height 0.7s ease-in, padding 0.7s ease-in;
         }
@@ -82,7 +86,7 @@
             transform: rotate(180deg);
         }
         .ohdibs-logo {
-            height: 40px; /* Adjust height as needed */
+            height: 120px; /* Adjusted from 40px to 120px (3x larger) */
             width: auto;
         }
     </style>
@@ -90,20 +94,20 @@
 <body class="antialiased">
 
     <!-- Header Section -->
-    <header class="bg-white shadow-sm py-4">
+    <header class="bg-[#FF0000] shadow-sm py-4">
         <nav class="container mx-auto px-4 flex justify-between items-center">
             <div class="p-2">
-                <img src="http://googleusercontent.com/file_content/2" alt="OH Dibs Logo" class="ohdibs-logo">
+                <img src="https://storage.googleapis.com/idx-acnt-gs.ihouseprd.com/AR1059431/file_manager/OHDibsLogo.png" alt="OH Dibs Logo" class="ohdibs-logo">
             </div>
             <ul class="hidden md:flex space-x-6">
-                <li><a href="index.html" class="text-gray-700 hover:text-red-700 font-medium transition duration-200">Home</a></li>
-                <li><a href="features.html" class="text-gray-700 hover:text-red-700 font-medium transition duration-200">Features</a></li>
-                <li><a href="pricing.html" class="text-gray-700 hover:text-red-700 font-medium transition duration-200">Pricing</a></li>
-                <li><a href="faq.html" class="text-red-700 font-medium transition duration-200">FAQ</a></li>
-                <li><a href="contact-page.html" class="text-gray-700 hover:text-red-700 font-medium transition duration-200">Contact</a></li>
+                <li><a href="index.html" class="text-white hover:text-gray-200 font-medium transition duration-200">Home</a></li>
+                <li><a href="features.html" class="text-white hover:text-gray-200 font-medium transition duration-200">Features</a></li>
+                <li><a href="pricing.html" class="text-white hover:text-gray-200 font-medium transition duration-200">Pricing</a></li>
+                <li><a href="faq.html" class="text-white font-medium transition duration-200">FAQ</a></li>
+                <li><a href="contact-page.html" class="text-white hover:text-gray-200 font-medium transition duration-200">Contact</a></li>
             </ul>
             <!-- Mobile Menu Button (Hamburger) -->
-            <button class="md:hidden text-gray-700 focus:outline-none">
+            <button class="md:hidden text-white focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </button>
         </nav>
@@ -117,7 +121,7 @@
                 <!-- FAQ Item 1 -->
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>What is OH Dibs?</span>
+                        <span>What makes OH Dibs the essential tool for modern brokerages?</span>
                         <svg class="w-6 h-6 faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
                     <div class="faq-answer">
@@ -128,7 +132,7 @@
                 <!-- FAQ Item 2 -->
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>How does the agent matching system work?</span>
+                        <span>How does OH Dibs ensure optimal agent-to-opportunity matching?</span>
                         <svg class="w-6 h-6 faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
                     <div class="faq-answer">
@@ -139,7 +143,7 @@
                 <!-- FAQ Item 3 -->
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>Is there a setup fee for the plans?</span>
+                        <span>Are there flexible pricing options, and what are the initial costs?</span>
                         <svg class="w-6 h-6 faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
                     <div class="faq-answer">
@@ -150,11 +154,44 @@
                 <!-- FAQ Item 4 -->
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>Do all plans include the same features?</span>
+                        <span>What core features are included across all OH Dibs plans?</span>
                         <svg class="w-6 h-6 faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
                     <div class="faq-answer">
                         <p>All our plans include core features such as Unlimited Open Houses, Effortless Scheduling, Automated Notifications, Mobile-Friendly Interface, Priority Support, and Leverage for Top Agents. Higher-tier plans offer additional benefits like Dedicated Onboarding and Custom Integrations.</p>
+                    </div>
+                </div>
+
+                <!-- NEW FAQ Item: Lender Payment -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Can our Lender pay for our brokerage's subscription?</span>
+                        <svg class="w-6 h-6 faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, your lender can pay for your brokerage's OH Dibs subscription. This can be a great way to leverage partnerships and provide value to your agents.</p>
+                    </div>
+                </div>
+
+                <!-- Existing FAQ Item 8 (now 7) -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>What level of support can your agents expect from OH Dibs?</span>
+                        <svg class="w-6 h-6 faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We provide priority support for all our plans, ensuring that agents have access to assistance when they need it. This includes email support and access to a comprehensive knowledge base. Pro and Enterprise plans may include dedicated onboarding and account management.</p>
+                    </div>
+                </div>
+
+                <!-- Existing FAQ Item 9 (now 8) -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>How does OH Dibs safeguard your brokerage's sensitive data?</span>
+                        <svg class="w-6 h-6 faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Data security is a top priority for OH Dibs. We employ industry-standard encryption and security protocols to protect your brokerage's sensitive information and client data. Regular security audits are conducted to ensure the integrity and confidentiality of your data.</p>
                     </div>
                 </div>
             </div>
@@ -162,13 +199,13 @@
     </section>
 
     <!-- Call to Action / Contact Section (replicated for standalone page) -->
-    <section class="bg-red-800 text-white py-16 md:py-24 text-center rounded-t-3xl shadow-xl">
+    <section class="bg-[var(--color-dark-red)] text-white py-16 md:py-24 text-center rounded-t-3xl shadow-xl">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Open Houses?</h2>
             <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-90">
                 Join forward-thinking brokerages transforming their open house management.
             </p>
-            <a href="contact-page.html" class="btn-primary bg-white text-red-800 hover:bg-gray-100 inline-block">
+            <a href="contact-page.html" class="btn-primary bg-white text-[var(--color-dark-red)] hover:bg-gray-100 inline-block">
                 Contact Us Today
             </a>
         </div>
@@ -184,4 +221,30 @@
                 <a href="#" class="hover:text-white transition duration-200">Privacy Policy</a>
                 <a href="#" class="hover:text-white transition duration-200">Terms of Service</a>
                 <a href="tel:8507643427" class="hover:text-white transition duration-200">(850) 764-3427</a>
-                <a href="mailto:info@OHDibs.com" class="hover:text-white transit
+                <a href="mailto:info@OHDibs.com" class="hover:text-white transition duration-200">info@OHDibs.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('.faq-icon');
+
+            if (answer.classList.contains('open')) {
+                answer.classList.remove('open');
+                element.classList.remove('active');
+            } else {
+                // Close all other open FAQ items
+                document.querySelectorAll('.faq-answer.open').forEach(item => {
+                    item.classList.remove('open');
+                    item.previousElementSibling.classList.remove('active');
+                });
+
+                answer.classList.add('open');
+                element.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
