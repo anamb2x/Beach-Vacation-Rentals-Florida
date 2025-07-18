@@ -47,31 +47,70 @@
             color: var(--color-primary-red);
         }
         .ohdibs-logo {
-            height: 120px; /* Adjusted from 40px to 120px (tripled) */
+            height: 134px; /* Consistent logo size */
             width: auto;
+        }
+        /* Mobile navigation specific styles */
+        .mobile-menu {
+            display: none; /* Hidden by default */
+            flex-direction: column;
+            width: 100%;
+            background-color: #f8fafc; /* Light Slate 50 */
+            position: absolute;
+            top: 100%; /* Position below the header */
+            left: 0;
+            z-index: 10;
+            padding: 1rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .mobile-menu.active {
+            display: flex;
+        }
+        .mobile-menu li {
+            text-align: center;
+            padding: 0.75rem 0;
+        }
+        .mobile-menu a {
+            color: #1e293b; /* Slate 900 */
+            font-weight: 500;
+            display: block;
+            padding: 0.5rem 1rem;
+        }
+        .mobile-menu a:hover {
+            background-color: rgba(0, 0, 0, 0.05);
         }
     </style>
 </head>
 <body class="antialiased">
 
     <!-- Header Section -->
-    <header class="bg-white shadow-sm py-0"> <!-- Removed pt-4, changed to py-0 for no vertical space -->
-        <nav class="container mx-auto px-4 flex justify-between items-center py-0"> <!-- Removed py-4, changed to py-0 for no vertical space -->
-            <div class=""> <!-- Removed p-2 -->
-                <img src="https://storage.googleapis.com/idx-acnt-gs.ihouseprd.com/AR1059431/file_manager/OHDibsLogo.png" alt="OH Dibs Logo" class="ohdibs-logo">
+    <header class="bg-white shadow-sm py-0 relative"> <!-- Changed background to white -->
+        <nav class="container mx-auto px-4 flex justify-between items-center py-0">
+            <div class="">
+                <a href="index.html"> <!-- Added link to home page for logo -->
+                    <img src="https://storage.googleapis.com/idx-acnt-gs.ihouseprd.com/AR1059431/file_manager/OHDibsLogo.png" alt="OH Dibs Logo" class="ohdibs-logo">
+                </a>
             </div>
-            <ul class="hidden md:flex space-x-6">
-                <li><a href="index.html" class="text-[var(--color-primary-red)] font-medium transition duration-200">Home</a></li>
-                <li><a href="features.html" class="text-gray-700 hover:text-[var(--color-primary-red)] font-medium transition duration-200">Features</a></li>
-                <li><a href="pricing.html" class="text-gray-700 hover:text-[var(--color-primary-red)] font-medium transition duration-200">Pricing</a></li>
-                <li><a href="faq.html" class="text-gray-700 hover:text-[var(--color-primary-red)] font-medium transition duration-200">FAQ</a></li>
-                <li><a href="contact-page.html" class="text-gray-700 hover:text-[var(--color-primary-red)] font-medium transition duration-200">Contact</a></li>
+            <ul id="desktop-nav" class="hidden md:flex space-x-6">
+                <li><a href="index.html" class="text-gray-700 font-medium transition duration-200 hover:text-red-700">Home</a></li>
+                <li><a href="features.html" class="text-gray-700 hover:text-red-700 font-medium transition duration-200">Features</a></li>
+                <li><a href="pricing.html" class="text-gray-700 hover:text-red-700 font-medium transition duration-200">Pricing</a></li>
+                <li><a href="faq.html" class="text-gray-700 hover:text-red-700 font-medium transition duration-200">FAQ</a></li>
+                <li><a href="contact-page.html" class="text-gray-700 hover:text-red-700 font-medium transition duration-200">Contact</a></li>
             </ul>
             <!-- Mobile Menu Button (Hamburger) -->
-            <button class="md:hidden text-gray-700 focus:outline-none">
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </button>
         </nav>
+        <!-- Mobile Menu (Hidden by default) -->
+        <ul id="mobile-menu" class="mobile-menu md:hidden">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact-page.html">Contact</a></li>
+        </ul>
     </header>
 
     <!-- Hero Section -->
@@ -138,5 +177,13 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
